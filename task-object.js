@@ -10,8 +10,12 @@
 
 // Your code:
 const volumeOfBox = (obj) => {
-
+    let total_volume = obj.width * obj.length * obj.height;
+    console.log(total_volume);
 };
+
+console.log("volumeOfBox");
+volumeOfBox({width : 2, length : 5, height : 1});
   
 // 2 ----
 // Create a function that takes strings - firstname, lastname, age, and return object with firstname, lastname, age, yearOfBirth
@@ -20,9 +24,16 @@ const volumeOfBox = (obj) => {
 
 // Your code:
 const personObject = (firstname, lastname, age) => {
-
-
+    const new_obj = {firstname : "", lastname : "", age : 0, yearOfBirth : 2021};
+    new_obj.firstname = firstname;
+    new_obj.lastname = lastname;
+    new_obj.age = age;
+    new_obj.yearOfBirth -= age;
+    console.log(new_obj);
 };
+
+console.log("personObject");
+personObject("Obi-wan", "Kenobi", "40");
 
 // 3 ----
 // Create the function that takes an array with objects and returns the sum of people's budgets.
@@ -35,8 +46,20 @@ const personObject = (firstname, lastname, age) => {
 
 //Your code:
 const getBudgets = (persons) => {
-
+    let sum = 0;
+    for(let i = 0; i < persons.length; i++)
+    {
+        sum += persons[i].budget;
+    }
+    console.log(sum);
 };
+
+console.log("getBudgets");
+getBudgets([
+       { name: "John", age: 21, budget: 23000 },
+       { name: "Steve",  age: 32, budget: 40000 },
+       { name: "Martin",  age: 16, budget: 2700 }
+    ]);
 
 // 4 ----
 // Create function that takes array of cars and sort them by price
@@ -46,6 +69,11 @@ const getBudgets = (persons) => {
 
 // Your code:
 const sortVehiclesByPrice = (vehicles) => {
+  let result = [{name : "", price : 0}]
   
 
 };
+
+console.log("sortVehiclesByPrice");
+const vehicles = [{name: "Executor Star Dreadnought", price: 999}, {name: "T-47 Airspeeder", price: 5}, {name: "AT-AT", price : 20}]
+sortVehiclesByPrice(vehicles);
