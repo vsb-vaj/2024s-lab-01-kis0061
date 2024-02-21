@@ -52,7 +52,7 @@ printLastItem(numbers);
 // e) Function which will print to console the largest number (You can check Math functions)
 const printLargestItem = (numbers) => {
   // Your code:
-
+  console.log("test")
 };
 
 // f) Function which will print to console the smallest number (You can check Math functions)
