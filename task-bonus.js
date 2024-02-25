@@ -8,9 +8,11 @@
 
 // Your code:
 const drawTriangle = (length = 5) => {
-  
-    // ... write code ...
+  // ... write code ...
 };
+
+console.log("drawTriangle");
+drawTriangle();
 
 // 2#  ========== BONUS =======================
 // Write function which will (with cycles) display this (keep in mind that there is no space after the last char):
