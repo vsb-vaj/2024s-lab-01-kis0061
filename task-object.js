@@ -69,11 +69,24 @@ getBudgets([
 
 // Your code:
 const sortVehiclesByPrice = (vehicles) => {
-  let result = [{name : "", price : 0}]
-  
-
-};
+    let tmp;
+    for(let i = 0; i < vehicles.length; i++) 
+    {
+      for(let j = 0; j < vehicles.length - 1; j++)
+      {
+        if(vehicles[j].price > vehicles[j+1].price) 
+        {
+            tmp = vehicles[j];
+            vehicles[j] = vehicles[j + 1];
+            vehicles[j + 1] = tmp;
+        }
+      }
+    }
+    
+    console.log(vehicles);
+  };
 
 console.log("sortVehiclesByPrice");
 const vehicles = [{name: "Executor Star Dreadnought", price: 999}, {name: "T-47 Airspeeder", price: 5}, {name: "AT-AT", price : 20}]
+//const vehicles = [{name: "Executor Star Dreadnought", price: 5}, {name: "T-47 Airspeeder", price: 999}, {name: "AT-AT", price : 20}, {name: "TEST", price: 15}]
 sortVehiclesByPrice(vehicles);
